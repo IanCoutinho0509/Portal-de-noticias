@@ -22,6 +22,8 @@ section header{/*todo section que tiver header dentro*/
 }
 
 #featured{
+    grid-area: featured;
+
     img{ /*qualquer img sentro do featured*/
         height: 100%; /*altura cobre o bloco todo que esta dentro*/
         object-fit: cover; /*enquadra certinho sem esticar*/
@@ -59,6 +61,7 @@ section header{/*todo section que tiver header dentro*/
 }
 
 #weekly{
+    grid-area: weekly;
 
     &>div{/*apenas o primeiro nivel de div*/
         grid-template-columns: repeat(4, 292px); /*colocando um do lado do outro das 4 img*/
@@ -81,6 +84,36 @@ section header{/*todo section que tiver header dentro*/
             margin-top: 8px;
             font-weight: 800;
         }
+    }
+}
+
+#ai{
+    grid-area: ai;
+
+    img{
+        width: 176px;
+        height: auto;
+    }
+
+    h3{
+        margin-block: 8px 4px; /*em cima e em baixo*/
+    }
+}
+
+aside{
+    grid-area: aside;
+}
+
+#more{
+    margin-top: 32px;
+
+    h3{
+        margin-top: 8px;
+    }
+
+    img{
+        width: 72px;
+        height: auto;
     }
 }
 

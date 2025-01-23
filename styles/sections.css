@@ -2,6 +2,23 @@
     img{ /*qualquer img sentro do featured*/
         height: 100%; /*altura cobre o bloco todo que esta dentro*/
         object-fit: cover; /*enquadra certinho sem esticar*/
-        border-radius: 4px;/*arredonda as bordas*/
     }
 }
+
+.card{
+    border-radius: 4px;/*arredonda as bordas*/
+    overflow: hidden;/*se tiver transbordamento ele apaga tudo que tiver fora da caixa*/
+    position: relative; /*pra servir de referencia pro elemento before que ira cubrir tudo do card*/
+    &::before{/*esse & representa o card e eu estou adicionando um elemento antes de um elemento com a classe card*/
+        content: "";
+        position: absolute;
+        inset: 0;
+        top: 50%;/*começando a partir do meio*/
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617 100%
+        );/*essa funçao avisa que é pra fazer um degrade que começa no transparente e vai pro preto e é pra fazer em 180 graus*/
+    }
+}
+

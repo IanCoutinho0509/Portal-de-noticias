@@ -1,0 +1,7 @@
+#featured{
+    img{ /*qualquer img sentro do featured*/
+        height: 100%; /*altura cobre o bloco todo que esta dentro*/
+        object-fit: cover; /*enquadra certinho sem esticar*/
+        border-radius: 4px;/*arredonda as bordas*/
+    }
+}

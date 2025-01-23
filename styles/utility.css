@@ -1,0 +1,15 @@
+.grid{
+    display: grid;
+}
+
+.grid-flow-col{ 
+    grid-auto-flow: column;/*fazendo virar colunas o grid e lembra que é igual matriz*/
+}
+
+.grid-cols-2{
+    grid-template-columns: 1fr 1fr; /*deixando com duas colunas*/
+}
+
+.gap-16{
+    gap: 16px; /*tudo que tiver dentro tem um espaçamento de 16px*/
+}

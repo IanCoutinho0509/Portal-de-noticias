@@ -1,37 +1,87 @@
+section header{/*todo section que tiver header dentro*/
+    border-top: 1px solid var(--stroke-color);
+    padding-block: 12px 24px;/*em cima e em baixo*/
+    font: var(--text-span);
+    
+
+    a{
+        justify-self: end; /*colocando pro final*/
+        align-items: center;/*a seta estava desalinhada*/
+        gap: 8px;
+
+        span{
+            background-image: url(../assets/icons/ArrowRight.svg); /*colocando a sentinha ai tive q subir uma pasta depois ir pro assets*/
+            width: 16px;
+            height: 16px;
+        }
+
+        &:hover span{ /*quando eu passar em cima do span dentro do a */
+            background-image: url(../assets/icons/ArrowRight-hover.svg);
+        }
+    }
+}
+
 #featured{
     img{ /*qualquer img sentro do featured*/
         height: 100%; /*altura cobre o bloco todo que esta dentro*/
         object-fit: cover; /*enquadra certinho sem esticar*/
     }
+
+    .card{
+        border-radius: 4px;/*arredonda as bordas*/
+        overflow: hidden;/*se tiver transbordamento ele apaga tudo que tiver fora da caixa*/
+        position: relative; /*pra servir de referencia pro elemento before que ira cubrir tudo do card*/
+        &::before{/*esse & representa o card e eu estou adicionando um elemento antes de um elemento com a classe card*/
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;/*começando a partir do meio*/
+            background: linear-gradient(
+                180deg,
+                transparent 0%,
+                #020617 100%
+            );/*essa funçao avisa que é pra fazer um degrade que começa no transparente e vai pro preto e é pra fazer em 180 graus*/
+        }
+        figcaption{
+            position: absolute;/*nao aparecia o texto anetes*/
+            bottom: 0; /*colocando em baixo*/
+            padding: 24px; /*interno*/
+    
+            &:has(.text-lg){/*& sobstitui o figcaptionn e é somente se tiver o texte large faz isso pq a imagem grande tem q ter padding de 24 mas as menores nao*/
+                padding: 12px;
+            }
+    
+            h2{
+                margin-top: 8px;/*dando uma separadinha com o texto de cima*/
+            }
+        }
+    }
 }
 
-.card{
-    border-radius: 4px;/*arredonda as bordas*/
-    overflow: hidden;/*se tiver transbordamento ele apaga tudo que tiver fora da caixa*/
-    position: relative; /*pra servir de referencia pro elemento before que ira cubrir tudo do card*/
-    &::before{/*esse & representa o card e eu estou adicionando um elemento antes de um elemento com a classe card*/
-        content: "";
-        position: absolute;
-        inset: 0;
-        top: 50%;/*começando a partir do meio*/
-        background: linear-gradient(
-            180deg,
-            transparent 0%,
-            #020617 100%
-        );/*essa funçao avisa que é pra fazer um degrade que começa no transparente e vai pro preto e é pra fazer em 180 graus*/
-    }
-    figcaption{
-        position: absolute;/*nao aparecia o texto anetes*/
-        bottom: 0; /*colocando em baixo*/
-        padding: 24px; /*interno*/
+#weekly{
 
-        &:has(.text-lg){/*& sobstitui o figcaptionn e é somente se tiver o texte large faz isso pq a imagem grande tem q ter padding de 24 mas as menores nao*/
-            padding: 12px;
+    &>div{/*apenas o primeiro nivel de div*/
+        grid-template-columns: repeat(4, 292px); /*colocando um do lado do outro das 4 img*/
+    }
+
+    img{
+        height: 160px;
+    }
+
+    figure{
+        position: relative;
+
+        .content-tag{
+            position: absolute;
+            top: 8px;
+            left: 8px;
         }
 
-        h2{
-            margin-top: 8px;/*dando uma separadinha com o texto de cima*/
+        p{
+            margin-top: 8px;
+            font-weight: 800;
         }
     }
 }
+
 

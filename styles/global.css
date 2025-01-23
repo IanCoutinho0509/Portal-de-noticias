@@ -53,6 +53,7 @@ img{
 
 main{
     margin-top: 40px; /*espaçamento externo 40 px*/
+    gap: 80px;
 }
 
 .content-tag{

@@ -64,6 +64,7 @@ main{
     text-transform: uppercase;/*deixar maiusculo*/
     letter-spacing: 0.04em;/*em olha o tamanho de fonte do pai*/
     color: var(--text-color-primary);
+    box-shadow: 0px 0px 16px #02061740;/*esssa é a sombra borrada atras da caixa*/
 }
 
 

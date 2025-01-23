@@ -25,6 +25,10 @@
         bottom: 0; /*colocando em baixo*/
         padding: 24px; /*interno*/
 
+        &:has(.text-lg){/*& sobstitui o figcaptionn e é somente se tiver o texte large faz isso pq a imagem grande tem q ter padding de 24 mas as menores nao*/
+            padding: 12px;
+        }
+
         h2{
             margin-top: 8px;/*dando uma separadinha com o texto de cima*/
         }

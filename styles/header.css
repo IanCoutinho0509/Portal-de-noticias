@@ -1,0 +1,23 @@
+#primary {
+    padding-block:20px ; /*em cima e em baixo aplicando 20px internos*/
+
+    div{/*div dentro do primary*/
+        display: flex;
+        align-items: center; /*os icones estavam com problema de alinhamento ai com esse flex alinha tudo no centro*/
+        gap: 8px; /*elementos dentro da div ficaram com um espaçamento de 8 px*/
+    }
+
+    div:nth-child(2){ /*pegando a segunda div dentro do primary*/
+        margin-inline: auto; /*espaçamento esterno na esquerda e direita auto*/
+    }
+    div:nth-child(3){ /*colocando a terceira div no final*/
+        justify-self: end;
+    }
+}
+
+#secondary{
+    padding-block: 14px;/*espaçamento interno em cima e em baixo de 14 px*/
+    border: solid 1px var(--stroke-color);
+    border-inline: none;
+    justify-content: space-between; /*isso faz o espaçamento deles ficar igual entre elementos e posso usar isso pq é grid*/ 
+}

@@ -41,3 +41,17 @@ h1,h2,h3{
     font: inherit; /*herdando a cor do pai que ele esta dentro*/
 }
 
+.container{
+    max-width: 1280px;/*largura maxima*/
+    padding-inline: 32px; /*no eixo x vai ter espaçamento interno de 32*/
+    margin-inline: auto; /*no eixo x vai ter espaçamento externo auto*/
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-flow-col{ 
+    grid-auto-flow: column;/*fazendo virar colunas o grid e lembra que é igual matriz*/
+}
+

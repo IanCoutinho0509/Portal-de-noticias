@@ -55,5 +55,16 @@ main{
     margin-top: 40px; /*espaçamento externo 40 px*/
 }
 
+.content-tag{
+    display: inline-block; /*quero que seja inline e block pq se n vai dar problema no background por falta do block e problema no padding por causa do por falta inline*/
+    background-color: var(--brand-color-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font: 500 10px/1.2 var(--font-family);
+    text-transform: uppercase;/*deixar maiusculo*/
+    letter-spacing: 0.04em;/*em olha o tamanho de fonte do pai*/
+    color: var(--text-color-primary);
+}
+
 
 

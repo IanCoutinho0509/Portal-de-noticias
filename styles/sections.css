@@ -20,5 +20,14 @@
             #020617 100%
         );/*essa funçao avisa que é pra fazer um degrade que começa no transparente e vai pro preto e é pra fazer em 180 graus*/
     }
+    figcaption{
+        position: absolute;/*nao aparecia o texto anetes*/
+        bottom: 0; /*colocando em baixo*/
+        padding: 24px; /*interno*/
+
+        h2{
+            margin-top: 8px;/*dando uma separadinha com o texto de cima*/
+        }
+    }
 }
 
